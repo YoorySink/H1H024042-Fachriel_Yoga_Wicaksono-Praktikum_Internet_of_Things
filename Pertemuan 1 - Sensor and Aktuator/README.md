@@ -5,19 +5,19 @@
 pembacaan sebelum ditampilkan, dan berikan penjelasan di setiap baris kode yang 
 ditambahkan!
 ```c
-#include <DHT.h>              // Memasukkan library DHT agar ESP dapat menggunakan fungsi-fungsi untuk membaca sensor DHT22
+#include <DHT.h>              // Memasukkan library DHT agar ESP dapat menggunakan fungsi-fungsi untuk membaca sensor DHT11
 
-#define DHTPIN 4               // Menentukan GPIO 4 ESP sebagai pin yang digunakan untuk menerima data dari DHT22
-#define DHTTYPE DHT22          // Menentukan jenis sensor yang digunakan adalah DHT22
+#define DHTPIN 14               // Menentukan GPIO 14 ESP sebagai pin yang digunakan untuk menerima data dari DHT11
+#define DHTTYPE DHT11          // Menentukan jenis sensor yang digunakan adalah DHT11
 
-DHT dht(DHTPIN, DHTTYPE);      // Membuat objek dht dengan konfigurasi pin GPIO 4 dan tipe sensor DHT22
+DHT dht(DHTPIN, DHTTYPE);      // Membuat objek dht dengan konfigurasi pin GPIO 4 dan tipe sensor DHT11
 
 const int jumlahSampel = 5;    // Menentukan berapa kali pembacaan akan dirata-ratakan sebelum ditampilkan
 
 void setup() {
   Serial.begin(115200);        // Mengaktifkan komunikasi serial dengan baud rate 115200
-  dht.begin();                 // Melakukan inisialisasi sensor DHT22 sebelum digunakan
-  Serial.println("Memulai akuisisi data sensor DHT22...");
+  dht.begin();                 // Melakukan inisialisasi sensor DHT11 sebelum digunakan
+  Serial.println("Memulai akuisisi data sensor DHT11...");
 }
 
 void loop() {
@@ -60,7 +60,7 @@ void loop() {
 }
 ```
 ### library
-dht22
+dht11
 
 ## Percobaan 2A
 > Modifikasi program agar menggunakan dua ambang batas (histerisis), misalnya aktuator 
@@ -68,13 +68,13 @@ menyala pada suhu di atas 30°C dan baru mati pada suhu di bawah 28°C, dan beri
 penjelasan di setiap baris kode nya dalam bentuk README.md!
 
 ```c
-#include <DHT.h>              // Memasukkan library DHT agar ESP dapat menggunakan fungsi-fungsi untuk membaca sensor DHT22
+#include <DHT.h>              // Memasukkan library DHT agar ESP dapat menggunakan fungsi-fungsi untuk membaca sensor DHT11
 
-#define DHTPIN 4               // Menentukan GPIO 4 ESP sebagai pin yang digunakan untuk menerima data dari DHT22
-#define DHTTYPE DHT22          // Menentukan jenis sensor yang digunakan adalah DHT22
-#define RELAYPIN 26            // Menentukan GPIO 26 sebagai pin kendali relay/LED indikator
+#define DHTPIN 14               // Menentukan GPIO 14 ESP sebagai pin yang digunakan untuk menerima data dari DHT11
+#define DHTTYPE DHT11          // Menentukan jenis sensor yang digunakan adalah DHT11
+#define RELAYPIN 16            // Menentukan GPIO 16 sebagai pin kendali relay/LED indikator
 
-DHT dht(DHTPIN, DHTTYPE);      // Membuat objek dht dengan konfigurasi pin GPIO 4 dan tipe sensor DHT22
+DHT dht(DHTPIN, DHTTYPE);      // Membuat objek dht dengan konfigurasi pin GPIO 4 dan tipe sensor DHT11
 
 const float suhuAtas  = 30.0;  // Ambang batas atas: suhu di atas nilai ini akan menyalakan aktuator
 const float suhuBawah = 28.0;  // Ambang batas bawah: suhu di bawah nilai ini akan mematikan aktuator
@@ -83,13 +83,13 @@ bool statusAktuator = false;   // Variabel penyimpan status aktuator saat ini (f
                                 // Variabel ini diperlukan agar sistem "mengingat" kondisi sebelumnya
 void setup() {
   Serial.begin(115200);        // Mengaktifkan komunikasi serial dengan baud rate 115200 sehingga data dapat ditampilkan pada Serial Monitor
-  dht.begin();                 // Melakukan inisialisasi sensor DHT22 sebelum digunakan
+  dht.begin();                 // Melakukan inisialisasi sensor DHT11 sebelum digunakan
   pinMode(RELAYPIN, OUTPUT);   // Mengatur GPIO 26 sebagai pin keluaran karena digunakan untuk memberikan sinyal kepada aktuator
   digitalWrite(RELAYPIN, LOW); // Memastikan aktuator berada dalam kondisi mati ketika sistem pertama kali dijalankan
 }
 
 void loop() {
-  float suhu = dht.readTemperature();   // Membaca suhu dari sensor DHT22
+  float suhu = dht.readTemperature();   // Membaca suhu dari sensor DHT11
 
   if (isnan(suhu)) {
     // Memeriksa apakah hasil pembacaan sensor menghasilkan nilai NaN (Not a Number)
@@ -121,7 +121,7 @@ void loop() {
 }
 ```
 ## library
-dht22
+dht11
 
 # Dokumentasi
 ---
