@@ -1,22 +1,9 @@
 # Pertanyaan praktikum
 ---
-### 1.5.4 Pertanyaan Praktikum: 
-1) Gambarkan diagram alur (flowchart) proses akuisisi data sensor DHT22 pada program 
-di atas! 
-<p align="center">
-    <img width="419" height="500" alt="image" src="https://github.com/user-attachments/assets/7a01a790-97ed-44b7-970f-807811862a50" />
-</p>
-
-2) Apa fungsi dari perintah isnan() pada program tersebut? 
-> isnan() memeriksa apakah nilai yang dibaca dari sensor bernilai NaN (Not a Number) artinya pembacaan gagal/tidak valid (misal karena gangguan komunikasi dengan sensor). Jika hasilnya NaN, program tidak menampilkan data yang salah, melainkan mencetak pesan error. 
-
-3) Jelaskan mengapa diperlukan jeda (delay) minimal sekitar 2 detik antar pembacaan 
-sensor DHT22! 
-> DHT22 punya keterbatasan kecepatan sampling internal sensor ini butuh waktu untuk menyelesaikan satu siklus pengukuran dan komunikasi data sebelum siap dibaca lagi. Jika dibaca terlalu cepat (kurang dari 2 detik), hasil pembacaan bisa tidak stabil, gagal, atau menghasilkan nilai NaN karena sensor belum selesai memperbarui datanya.
-
-4) Modifikasi program agar data suhu dan kelembaban dirata-ratakan dari 5 kali 
+## percobaan 1A
+> Modifikasi program agar data suhu dan kelembaban dirata-ratakan dari 5 kali 
 pembacaan sebelum ditampilkan, dan berikan penjelasan di setiap baris kode yang 
-ditambahkan dalam bentuk README.md!
+ditambahkan!
 ```c
 #include <DHT.h>              // Memasukkan library DHT agar ESP dapat menggunakan fungsi-fungsi untuk membaca sensor DHT22
 
@@ -72,21 +59,11 @@ void loop() {
   }
 }
 ```
+### library
+dht22
 
-### 1.6.4 Pertanyaan praktikum
-1. Mengapa diperlukan nilai ambang batas (threshold) dalam sistem kendali aktuator 
-berbasis sensor? 
-> Threshold diperlukan sebagai patokan otomatis bagi sistem untuk memutuskan kapan aktuator harus ON/OFF tanpa campur tangan kita (manusia). 
-
-2. Jelaskan apa yang akan terjadi apabila nilai suhuThreshold diturunkan menjadi sangat 
-rendah, misalnya 20.0! 
-> Jika threshold diturunkan jadi 20°C, aktuator akan hampir selalu ON karena suhu ruangan normal biasanya sudah di atas 20°C sistem kehilangan fungsi kendalinya dan boros energi/mempercepat keausan komponen. 
-
-3. Apa perbedaan antara kendali aktuator secara terus-menerus (kondisi tunggal) dengan 
-kendali menggunakan histerisis (dua ambang batas)? 
-> Kondisi tunggal rawan chattering (ON/OFF cepat berulang saat suhu naik-turun tipis di sekitar threshold), sedangkan histerisis punya zona aman di antara dua batas sehingga status lebih stabil dan aktuator tidak sering berubah. 
-
-4. Modifikasi program agar menggunakan dua ambang batas (histerisis), misalnya aktuator 
+## Percobaan 2A
+> Modifikasi program agar menggunakan dua ambang batas (histerisis), misalnya aktuator 
 menyala pada suhu di atas 30°C dan baru mati pada suhu di bawah 28°C, dan berikan 
 penjelasan di setiap baris kode nya dalam bentuk README.md!
 
@@ -143,6 +120,9 @@ void loop() {
   delay(2000);   // Memberikan jeda selama 2000 ms (2 detik) sebelum melakukan pembacaan berikutnya
 }
 ```
+## library
+dht22
+
 # Dokumentasi
 ---
 <p align="center">
