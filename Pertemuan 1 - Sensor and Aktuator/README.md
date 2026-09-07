@@ -3,7 +3,8 @@
 ### 1.5.4 Pertanyaan Praktikum: 
 1) Gambarkan diagram alur (flowchart) proses akuisisi data sensor DHT22 pada program 
 di atas! 
- ![alt text](image.png)
+<img width="419" height="500" alt="image" src="https://github.com/user-attachments/assets/7a01a790-97ed-44b7-970f-807811862a50" />
+
 
 2) Apa fungsi dari perintah isnan() pada program tersebut? 
 > isnan() memeriksa apakah nilai yang dibaca dari sensor bernilai NaN (Not a Number) artinya pembacaan gagal/tidak valid (misal karena gangguan komunikasi dengan sensor). Jika hasilnya NaN, program tidak menampilkan data yang salah, melainkan mencetak pesan error. 
@@ -141,3 +142,11 @@ void loop() {
   delay(2000);   // Memberikan jeda selama 2000 ms (2 detik) sebelum melakukan pembacaan berikutnya
 }
 ```
+# Dokumentasi
+---
+<p align="center">
+  <img src="<img width="1280" height="960" alt="66f6b013-deb4-4625-b0a6-97e960a68ac1" src="https://github.com/user-attachments/assets/974860e5-af63-40fe-8414-c7dce68c8582" />
+" width="350">
+  <img src="<img width="1280" height="960" alt="96e78248-326d-45eb-95d3-88c311b193f0" src="https://github.com/user-attachments/assets/99e85b0c-09bf-42f0-af12-b0237869bb26" />
+" width="350">
+</p>
