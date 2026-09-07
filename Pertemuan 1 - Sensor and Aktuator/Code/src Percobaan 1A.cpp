@@ -1,10 +1,10 @@
 #include <DHT.h>
-#define DHTPIN 4 // pin data DHT22 terhubung ke GPIO 4
-#define DHTTYPE DHT22 // tipe sensor yang digunakan
+#define DHTPIN 14 // pin data DHT22 terhubung ke GPIO 4
+#define DHTTYPE DHT11 // tipe sensor yang digunakan
 DHT dht(DHTPIN, DHTTYPE);
 void setup() {
     Serial.begin(115200);
-    dht.begin(); // inisialisasi sensor DHT22
+    dht.begin(); // inisialisasi sensor DHT11
     Serial.println("Memulai akuisisi data sensor DHT22...");
 }
 void loop() {
