@@ -284,6 +284,8 @@ const char* ap_password = "12345678"; // Password Access Point
   ...
 ```
 > Dua potongan program di atas digunakan untuk menampilkan informasi koneksi STA dan AP, yaitu IP Address yang diperoleh ESP8266 dari WiFi rumah dan IP Address yang digunakan oleh Access Point ESP8266.
+
+# Dokumentasi
 <p align="center">
   <img src="Dokumentasi/alat dan bahan.jpg" width="350" height="250">
   <img src="Dokumentasi/dokumentasi video percobaan 2B.gif" width="350" height="250">
