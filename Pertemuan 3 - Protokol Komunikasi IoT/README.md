@@ -286,20 +286,13 @@ client.setInsecure();
 > Program di atas menampilkan data suhu, kelembaban, dan waktu sejak ESP32 menyala dalam format JSON di Serial Monitor
 
 # dokumentasi
-<style>
-  .frame {
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
-  }
-</style>
 <table align="center">
   <tr>
     <th colspan="2" align="center" style="text-align: center;">alat dan bahan modul 3</th>
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="Dokumentasi/alat dan bahan.jpg" class="frame">
+      <img src="Dokumentasi/alat dan bahan.jpg" width="350">
     </td>
   </tr>
   <tr>
@@ -308,10 +301,10 @@ client.setInsecure();
   </tr>
   <tr>
     <td align="center">
-      <img src="Dokumentasi/Dokumentasi percobaan 3A.jpg" class="frame">
+      <img src="Dokumentasi/Dokumentasi percobaan 3A.jpg" width="350">
     </td>
     <td align="center">
-      <img src="Dokumentasi/Dokumentasi percobaan 3B.jpg" class="frame">
+      <img src="Dokumentasi/Dokumentasi percobaan 3B.jpg" width="350">
     </td>
   </tr>
   <tr>
@@ -320,10 +313,10 @@ client.setInsecure();
   </tr>
   <tr>
     <td align="center">
-      <img src="Dokumentasi/Dokumentasi video percobaan 3A.gif" class="frame">
+      <img src="Dokumentasi/Dokumentasi video percobaan 3A.gif" width="350">
     </td>
     <td align="center">
-      <img src="Dokumentasi/Dokumentasi video percobaan 3B.gif" class="frame">
+      <img src="Dokumentasi/Dokumentasi video percobaan 3B.gif" width="350">
     </td>
   </tr>
 </table>
