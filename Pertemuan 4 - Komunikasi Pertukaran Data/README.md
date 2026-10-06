@@ -601,7 +601,7 @@ digitalWrite(buzzerPin, LOW);
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="Dokumentasi/alat dan bahan.jpg" class="frame">
+      <img src="Dokumentasi/Alat dan Bahan.jpg" class="frame">
     </td>
   </tr>
   <tr>
